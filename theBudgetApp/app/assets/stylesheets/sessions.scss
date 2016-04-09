@@ -1,0 +1,19 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1#linkButton {
+    background-color: dodgerblue;
+    border-radius: 4px;
+    color: black;
+    margin: 10px 10px;
+    transition-duration: 0.5s;
+    font-size: 15px;
+    font: georgia;
+    font-style: normal;
+    text-align: center;
+    /*display: inline-block;*/
+    width: 100px;
+    word-spacing: 2em;
+    float: right;
+    cursor: pointer;
+}
