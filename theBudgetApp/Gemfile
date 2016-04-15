@@ -49,3 +49,7 @@ end
 gem 'haml'
 
 gem 'protected_attributes'
+
+gem 'omniauth'
+
+gem 'omniauth-facebook'

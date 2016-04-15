@@ -66,5 +66,9 @@ Rails.application.routes.draw do
   
   resources :home
   
+  get  'auth/:provider/callback' => 'sessions#create'
+  post 'logout' => 'sessions#destroy'
+  get  'auth/failure' => 'sessions#failure'
+  
   end
 end
