@@ -1,0 +1,10 @@
+%h2 Login
+
+= form_tag users_path, :method => :get do
+    = label "Username"
+    = text_field
+    
+    = label "Password"
+    = password_field
+    
+    = submit_tag 'Submit'
