@@ -1,0 +1,23 @@
+%div#header
+    %h1#appName Smart Budget
+    %h1#linkButton= link_to "Help", home_index_path
+    %h1#linkButton= link_to "LogIn", login_path
+    
+%body#thebody
+%table
+    %tr
+        %th#site ABOUT US
+        %th#site SIGN UP
+    %tr 
+        %td#addspace 
+            %p This app is to help students to manage their budget.<br>Saving saves students and this app helps student to<br> save their money by keeping track of their expendture.
+        %td#addspace 
+            %p This app is designed for students.<br>You can sign up for free with your .edu email.<br>Hurry up and start your budgeting today!
+    %tr
+        %td#tocenter= link_to "Learn More", home_index_path
+        %td#tocenter= link_to "Create new account", new_user_path
+    
+        
+%footer
+    %p#atend &copy; 2016 Sunny Shrestha, Safath Zaman, Jyoti Rana, Mira Sainju, Bradley Kunz All Rights Reserved
+

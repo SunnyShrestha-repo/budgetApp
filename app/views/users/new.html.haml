@@ -1,0 +1,21 @@
+%div#header
+    %h1#appName Sign Up
+    
+= form_tag users_path, :method => :post do
+
+    = label :users, :fname, 'First Name'
+    = text_field :users, :fname
+    
+    = label :users, :lname, 'Last Name'
+    = text_field :users, :lname    
+    
+    = label :users, :email, 'Email Address'
+    = text_field :users, :email   
+    
+    = label :users, :username, 'Username'
+    = text_field :users, :username  
+
+    = label :users, :username, 'Password'
+    = text_field :users, :password     
+    
+    = submit_tag 'Get Started'
