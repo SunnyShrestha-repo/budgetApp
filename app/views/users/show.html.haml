@@ -1,5 +1,21 @@
 %h1#UD Dashboard for users
 
-%body#UDbody
+
+-# in app/views/movies/show.html.haml
+
+%h2 Details about @user.username
+
+%ul#details
+  %li
+    Income:
+    = @user_income
+  %li
+    Expense:
+    = @user_expense
+
+%h3 Description:
 
 
+/*= link_to 'Back to movie list', movies_path # modify last 2 lines of app/views/movies/show.html.haml to:*/
+= link_to 'Edit info', edit_user_path
+/*-# This Delete link will not really be a link, but a form: = link_to 'Delete', movie_path(@movie), :method => :delete*/
