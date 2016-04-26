@@ -1,21 +1,26 @@
-%h1#UD Dashboard for users
-
-
+%h1#UD Dashboard for users #{@current_user_id}
 -# in app/views/movies/show.html.haml
 
-%h2 Details about @user.username
+%p.welcome Welcome, #{@user.fname}!
+-if @current_user_id
+  %p.welcome Welcome, @user!
+  = link_to 'Log Out', logout_path
+-else
+  %p.login= link_to 'Log in with your facebook account', '/auth/facebook'
+  
 
 %ul#details
   %li
     Income:
-    = @user_income
+    = @user.income
   %li
     Expense:
-    = @user_expense
+    = @user.expense
 
-%h3 Description:
+%p Description:
+%p Your this month's budget is 
+= @user.income- @user.expense
 
+<br>
 
-/*= link_to 'Back to movie list', movies_path # modify last 2 lines of app/views/movies/show.html.haml to:*/
 = link_to 'Edit info', edit_user_path
-/*-# This Delete link will not really be a link, but a form: = link_to 'Delete', movie_path(@movie), :method => :delete*/
