@@ -1,0 +1,13 @@
+
+
+= form_tag user_path, :method => :put do
+
+    = label :user, :income, 'Your Income'
+    = text_field :user, :income
+    
+    = label :user, :expense, 'Your Expense'
+    = text_field :user, :expense
+    
+
+    = submit_tag 'Update my budget'
+    

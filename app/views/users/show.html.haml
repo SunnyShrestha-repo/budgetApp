@@ -1,5 +1,26 @@
-%h1#UD Dashboard for users
+%h1#UD Dashboard for users #{@current_user_id}
+-# in app/views/movies/show.html.haml
 
-%body#UDbody
+%p.welcome Welcome, #{@user.fname}!
+-if @current_user_id
+  %p.welcome Welcome, @user!
+  = link_to 'Log Out', logout_path
+-else
+  %p.login= link_to 'Log in with your facebook account', '/auth/facebook'
+  
 
+%ul#details
+  %li
+    Income:
+    = @user.income
+  %li
+    Expense:
+    = @user.expense
 
+%p Description:
+%p Your this month's budget is 
+= @user.income- @user.expense
+
+<br>
+
+= link_to 'Edit info', edit_user_path

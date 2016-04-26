@@ -1,21 +1,24 @@
 %div#header
     %h1#appName Sign Up
     
-= form_tag users_path, :method => :post do
+= form_tag users_path(@users), :method => :post do
 
-    = label :users, :fname, 'First Name'
-    = text_field :users, :fname
+    = label :user, :fname, 'First Name'
+    = text_field :user, :fname
     
-    = label :users, :lname, 'Last Name'
-    = text_field :users, :lname    
+    = label :user, :lname, 'Last Name'
+    = text_field :user, :lname    
     
-    = label :users, :email, 'Email Address'
-    = text_field :users, :email   
-    
-    = label :users, :username, 'Username'
-    = text_field :users, :username  
+    = label :user, :email, 'Email Address'
+    = text_field :user, :email   
 
-    = label :users, :username, 'Password'
-    = text_field :users, :password     
+    = label :user, :password, 'Password'
+    = text_field :user, :password   
+    
+    = label :user, :income, "Income"
+    = text_field :user, :income
+    
+    = label :user, :expense, "Expense"
+    = text_field :user, :expense  
     
     = submit_tag 'Get Started'
